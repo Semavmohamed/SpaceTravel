@@ -1,0 +1,98 @@
+.home {
+    display: flex;
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.home.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.space-sec p,
+.text {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.space-sec,
+.explore-sec {
+    flex: 1;
+}
+
+.space-sec {
+    width: 600px;
+    margin: 0px 70px;
+    color: #fffffd;
+}
+
+.space-sec .paragraph {
+    font-size: 145px;
+    margin: 15px 0px;
+}
+
+.space-sec .text {
+    line-height: 2.5;
+    font-size: 23px;
+}
+
+.explore-sec {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+.home.loaded .explore-sec {
+    opacity: 1;
+}
+
+.explore-sec p {
+    position: absolute;
+    background-color: #fffffd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    left: 36%;
+    top: 0px;
+    font-size: 48px;
+    padding: 66px;
+    /* text-align: center; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+@media (max-width:750px) {
+    .App {
+        background-image: url('../assest/home/background-home-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 108vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    .space-sec {
+        width: 385px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .explore-sec p {
+        left: 50%;
+        transform: translateX(-50%);
+        /* لضبط العنصر في المنتصف */
+    }
+    .space-sec .paragraph {
+        font-size: 102px;}
+}

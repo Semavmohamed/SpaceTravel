@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 70px 50px 0px 50px;
+    z-index: 1;
+}
+
+.nav-img img {
+    width: 50px;
+}
+
+.nav-line {
+    width: 50%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 12%);
+    backdrop-filter: blur(10px);
+    position: relative;
+    left: 7%;
+    border-radius: 10px;
+}
+
+.nav-bar {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    position: relative;
+    left: 6%;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-bar ul button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-bar ul button {
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-bar ul .active {
+    border-bottom: 2px solid white;
+}
+
+.nav-bar ul button:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+/* mobile */
+.navbar .hidden{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width:750px){
+    .hamburger{
+        z-index: 11;
+        display: block;
+        cursor: pointer;
+    }
+    .nav-bar {
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+        position: absolute;
+        top: 0;
+        left: 46%;
+        width: 54%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 21%);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        z-index: 10;
+        margin-top: 66px;
+        
+    }
+    .navbar{
+        margin: 0px;
+        padding: 20px;
+    }
+    .show-menu {
+        transform: translateX(0); /* إظهار القائمة عند تفعيلها */
+    }
+    .navbar .hidden{
+        display: block;
+        width: 45px;
+        cursor: pointer;
+    }
+    .nav-line {
+        display: none;
+    }
+    .nav-bar ul {
+        flex-direction: column;
+        text-align: start;
+
+    }
+
+    .nav-bar ul button {
+        font-size: 17px;
+        padding: 20px;
+        font-weight: normal;
+    }
+   
+    
+}
